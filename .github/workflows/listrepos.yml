@@ -14,10 +14,10 @@ jobs:
         uses: octokit/request-action@v2.x
         id: repo_list
         with:
-          route: GET /search/repositories?q=wash
+          route: GET /search/repositories?q=wash&org=blueabraham
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}        
 
       # Runs a set of commands using the runners shell
       - name: List results from search
-        run: "echo latest release: ${{ steps.repo_list.outputs.data }}"
+        run: "echo repos matched: ${{ steps.repo_list.outputs.data }}"
