@@ -14,7 +14,7 @@ jobs:
         uses: octokit/request-action@v2.x
         id: repo_list
         with:
-          route: GET /search/repositories?q=wash&org=blueabraham
+          route: GET /search/repositories?q=org%3Dblueabraham+wash
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}        
 
