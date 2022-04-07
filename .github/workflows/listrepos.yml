@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         
-      - name: Repos
+      - name: Search for repos in org
         uses: octokit/request-action@v2.x
         id: repo_list
         with:
