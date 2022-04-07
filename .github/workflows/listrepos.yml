@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  listrepos:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,4 +20,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: List results from search
-        run: "echo repos matched: ${{ steps.repo_list.outputs.data }}"
+        run: "echo repos matched: ${{ steps.repo_list.outputs.data.length }}"
